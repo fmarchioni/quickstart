@@ -2,5 +2,11 @@ build:
   uri: https://github.com/wildfly/quickstart.git
   ref: main
   contextDir: helloworld
+
 deploy:
   replicas: 1
+  resources:
+    limits:
+      memory: 64Mi
+    requests:
+      memory: 32Mi
