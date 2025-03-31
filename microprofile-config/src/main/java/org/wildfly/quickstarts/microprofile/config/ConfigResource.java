@@ -27,7 +27,7 @@ public class ConfigResource {
 
     @GET
     @Path("/kill")
-    public void getKill() throws Excxeption {
+    public void getKill() throws Exception {
         List<byte[]> memoryHog = new ArrayList<>();
         while (true) {
             memoryHog.add(new byte[10 * 1024 * 1024]); // Allocazione di blocchi da 10MB
