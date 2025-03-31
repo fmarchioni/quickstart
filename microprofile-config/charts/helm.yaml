@@ -1,5 +1,5 @@
 build:
-  uri: https://github.com/wildfly/quickstart.git
+  uri: https://github.com/fmarchioni/quickstart.git
   ref: main
   contextDir: microprofile-config
 deploy:
