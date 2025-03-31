@@ -34,7 +34,6 @@ public class ConfigResource {
             Thread.sleep(100);
         }
     }
-    
     @Inject
     @ConfigProperty(name = "required.prop", defaultValue = "Default required prop value")
     private String requiredProp;
