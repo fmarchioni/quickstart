@@ -8,6 +8,8 @@ import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import java.util.Optional;
+import java.util.List;
+import java.util.ArrayList;
 
 @Path("/config")
 @ApplicationScoped
@@ -23,6 +25,16 @@ public class ConfigResource {
         return configValue;
     }
 
+    @GET
+    @Path("/kill")
+    public void getKill() throws Excxeption {
+        List<byte[]> memoryHog = new ArrayList<>();
+        while (true) {
+            memoryHog.add(new byte[10 * 1024 * 1024]); // Allocazione di blocchi da 10MB
+            Thread.sleep(100);
+        }
+    }
+    
     @Inject
     @ConfigProperty(name = "required.prop", defaultValue = "Default required prop value")
     private String requiredProp;
