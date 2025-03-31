@@ -7,6 +7,6 @@ deploy:
   replicas: 1
   resources:
     limits:
-      memory: 64Mi
+      memory: 128Mi
     requests:
-      memory: 32Mi
+      memory: 96Mi
